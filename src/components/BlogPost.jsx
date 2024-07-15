@@ -1,27 +1,30 @@
-import React from 'react';
-import '../App.css'; 
+import React from "react";
 
-const BlogPost = ({ title, image, author, date, likes, comments }) => {
-    return (
-        <div className="card">
-            <div className="img1">
-                <img src="https://avatars.githubusercontent.com/u/83268492?v=4" alt="Blog Post" width="310" height="200" style={{ borderRadius: '12px' }} />
-            </div>
-            <br />
-            <br />
-            <p className="card-title">{title}</p>
-            <hr />
-            <div className="pic">
-                <img src="https://avatars.githubusercontent.com/u/83268492?v=4" alt="Author" width="30" height="30" style={{ borderRadius: '30px' }} />
-            </div>
-            <span className="pic-text">{author}</span>
-            <span className="pic-text2">{date}</span>
-            <span className="heart"><i className="fas fa-heart"></i></span>
-            <p className="likes">{likes}</p>
-            <span className="comment"><i className="fas fa-comment-dots"></i></span>
-            <p className="comments">{comments}</p>
+const BlogPost = ({ title, image, author, date, comments }) => {
+  return (
+    <div className="card max-w-xl bg-white rounded-lg shadow-md overflow-hidden mx-auto">
+      <img className="w-full h-60 object-cover" src={image} alt={title} />
+      <div className="px-6 py-4">
+        <div className="font-bold text-xl mb-2">{title}</div>
+        <hr />
+        <div className="flex items-center mt-4">
+          <img
+            className="w-8 h-8 rounded-full mr-4"
+            src="https://avatars.githubusercontent.com/u/83268492?v=4"
+            alt={author}
+          />
+          <p className="text-lg">{author}</p>
         </div>
-    );
+        <div className="flex justify-between items-center mt-4 text-gray-500">
+          <span className="text-sm">{date}</span>
+          <div className="flex items-center space-x-2">
+            <span className="text-red-500">❤️</span>
+            <span>💬 {comments}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default BlogPost;

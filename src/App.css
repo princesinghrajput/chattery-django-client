@@ -1,32 +1,37 @@
-*{
+
+* {
   margin: 0px;
   padding: 0px;
 }
-body{
+
+body {
   background-color: #F5F8FF;
-  font-family: Plus Jakarta Sans;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
-.header{
+
+.header {
   display: flex;
   justify-content: space-between;
   background-color: white;
 }
-span{
+
+/* span {
   display: flex;
   justify-content: left;
   margin-left: 90px;
   position: relative;
   top: 15px;
   font-size: 20px;
-  font-family: Plus Jakarta Sans;
-}
-.chat{
- margin-left: 170px;
- position: relative;
- top: -21px;
+} */
+
+.chat {
+  margin-left: 170px;
+  position: relative;
+  top: -21px;
   color: rgb(13, 13, 203);
 }
-.profile{
+
+.profile {
   display: flex;
   justify-content: right;
   margin-right: 70px;
@@ -35,201 +40,204 @@ span{
   margin-top: 7px;
   margin-bottom: 4px;
 }
-.photo{
+
+.photo {
   width: 30px;
   height: 30px;
   border-radius: 30px;
   display: flex;
   justify-content: right;
 }
-select{
+
+select {
   border: none;
 }
-.main{
+
+.main {
   display: flex;
   justify-content: space-between;
   background-color: white;
   height: 65px;
   box-shadow: 10px 2px 4px 2px rgba(62,60,60,0.6);
 }
-.head2{
+
+.head2 {
   display: flex;
   justify-content: space-between;
 }
-.filter{
+
+.filter {
   color: rgb(56, 51, 51);
   position: relative;
   margin-bottom: 10px;
   font-size: 14px;
   margin-left: 100px;
 }
-.vertical{
+
+.vertical {
   border-left: 1px solid gray;
   height: 50px;
   margin-left: 25px;
   position: relative;
-  top:10px;
+  top: 10px;
 }
-.dropdowns{
+
+.dropdowns {
   display: flex; 
   align-items: center;
   margin-left: 25px;
 }
-#by{
+
+#by, .by, #date {
   color: rgb(58, 54, 54);
   font-size: 13px;
 }
-.by{
-  color: rgb(58, 54, 54);
-  font-size: 13px;
-}
-.all{
+
+.all, .selectdate {
   color: rgb(58, 54, 54);
   background-color: #F0F1F1;
   width: 150px;
   height: 30px;
   border-radius: 20px;
 }
-#date{
-  color: rgb(58, 54, 54);
-  font-size: 13px;
-}
-.date{
+
+.date {
   margin-left: 25px;
   font-size: 13px;
   color: rgb(58, 54, 54);
 }
-.selectdate{
-  color: rgb(58, 54, 54);
-  background-color: #F0F1F1;
-  width: 150px;
-  height: 30px;
-  border-radius: 20px;
-}
-.search{
+
+.search {
   position: relative;
   top: -10px;
   color: rgb(58, 54, 54);
   margin-right: 70px;
 }
-.text{
+
+.text {
   font-size: 13px;
 }
-input{
+
+input {
   margin-left: 85px;
   position: relative;
   top: 15px;
   color: rgb(58, 54, 54);
   border-radius: 20px;
   border: none;
-  height:29px ;
+  height: 29px;
   width: 180px;
   background-color: #F0F1F1;
   outline: none;
 }
-.searchicon{
+
+.searchicon {
   position: relative;
   top: -5px;
   font-size: smaller;
   color: rgb(58, 54, 54);
   margin-left: 246px;
 }
-.posts{
+
+.posts {
   font-size: 23px;
-  font-weight: 600px;
+  font-weight: 600;
+  margin-top: 20px;
+  text-align: center;
 }
-.cards{
+
+.cards {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
-  margin-left: 60px;
-  margin-right: 60px;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 30px 60px;
 }
-.card{
+
+.card {
   height: 385px;
   width: 350px;
-  background:#FFFFFF ;
+  background: #FFFFFF;
   margin: 0 auto;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 10px 10px 10px rgba(157, 156, 156, 0.1);
-  flex-wrap: wrap;
 }
-.img1{
+
+.img1 {
   width: 310px;
   height: 200px;
   position: relative;
   top: 17px;
   left: 18px;
   gap: 0px;
-  border-radius: 12.6px ;
-  opacity: 0px;
+  border-radius: 12.6px;
 }
-hr{
+
+/* hr {
   position: relative;
   top: 50px;
-  border:1px solid #ECECEC;
+  border: 1px solid #ECECEC;
   width: 305px;
   margin-left: 18.5px;
-}
-.card1{
+} */
+
+.card-title {
   width: 310px;
   height: 50px;
   position: relative;
   top: 37px;
   left: 18px;
-  gap: 0px;
-  opacity: 0px;
-  Name: 20 px - Sub Heading 2;
-  font-family: Plus Jakarta Sans;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 25.2px;
   text-align: left;
 }
-.pic{
+
+.pic {
   width: 30px;
   height: 30px;
   border-radius: 30px;
   display: flex;
   position: relative;
-  margin-left: 18px ;
+  margin-left: 18px;
   top: 68px;
 }
-.pic-text{
+
+.pic-text {
   position: relative;
   top: 35px;
   margin-left: 55px;
-  Name: 16 px - Paragraph 3 Semi bold;
-  font-family: Plus Jakarta Sans;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 20.16px;
   text-align: left;
 }
-.pic-text2{
+
+.pic-text2 {
   position: relative;
   top: 35px;
   margin-left: 55px;
-  Name: 14 px - Paragraph 4;
-  font-family: Plus Jakarta Sans;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 17.64px;
   text-align: left;
   color: #797979;
 }
-.heart{
+
+.heart {
   width: 12px;
   height: 10px;
   font-size: 16px;
   top: 18px;
   left: 70px;
-  gap: 0px;
-  opacity: 0px;
   color: #A5A5A5;
 }
-.likes{
+
+.likes {
   position: relative;
   top: 8px;
   left: 180px;
@@ -239,17 +247,17 @@ hr{
   text-align: left;
   color: #787878;
 }
-.comment{
+
+.comment {
   width: 15px;
   height: 13px;
   font-size: 17px;
   top: -7px;
   left: 125px;
-  gap: 0px;
-  opacity: 0px;
   color: #A5A5A5;
 }
-.comments{
+
+.comments {
   position: relative;
   top: -20px;
   left: 235px;
@@ -259,101 +267,81 @@ hr{
   text-align: left;
   color: #787878;
 }
-.card2{
-  width: 310px;
-  height: 50px;
-  position: relative;
-  top: 37px;
-  left: 18px;
-  gap: 0px;
-  opacity: 0px;
-  Name: 20 px - Sub Heading 2;
-  font-family: Plus Jakarta Sans;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 25.2px;
-  text-align: left;
-}
-.card3{
-  width: 310px;
-  height: 50px;
-  position: relative;
-  top: 37px;
-  left: 18px;
-  gap: 0px;
-  opacity: 0px;
-  Name: 20 px - Sub Heading 2;
-  font-family: Plus Jakarta Sans;
-  font-size: 20px;
-  line-height: 25.2px;
-  font-weight: 700;
-  text-align: left;
-}
 
-.bottom{
+.bottom {
   display: flex;
   justify-content: space-between;
   background-color: white;
   height: 140px;
   margin-top: 30px;
-  box-shadow: 1px 2px 4px 1px rgba(60,60,60,0.2);
+  box-shadow: 1px 2px 4px 1px rgba(60, 60, 60, 0.2);
 }
-.blog{
+
+.blog {
   color: rgb(197, 12, 12);
   position: relative;
   top: -10px;
   margin-left: 170px;
 }
-.para{
+
+.para {
   font-weight: 400;
   font-size: 13px;
   line-height: 22px;
 }
-.cat{
+
+.cat {
   font-weight: 700;
   line-height: 20.16px;
   margin-left: 80px;
   font-size: 16px;
 }
-.list{
+
+.list {
   position: relative;
   top: 25px;
   line-height: 22px;
 }
-.get{
+
+.get {
   font-weight: 700;
   line-height: 20.16px;
   margin-left: 80px;
   font-size: 16px;
 }
-.contact{
+
+.contact {
   position: relative;
   top: 25px;
   line-height: 22px;
 }
-.us{
+
+.us {
   font-weight: 700;
   line-height: 20.16px;
   text-align: justified;
   margin-right: 90px;
   font-size: 16px;
 }
-.icons{
+
+.icons {
   display: flex;
   justify-content: space-between;
   margin: 0px 100px 0px 105px;
   position: relative;
   top: 29px;
-  font-size:19px ;
+  font-size: 19px;
 }
-.footer{
+
+.footer {
   height: 50px;
   display: flex;
   justify-content: space-between;
-  background-color: white ;
+  background-color: white;
   margin-top: 2px;
 }
-.copyright{
+
+.copyright {
   font-weight: 400;
   line-height: 17.64px;
   text-align: justified;
@@ -361,7 +349,8 @@ hr{
   margin: 13px 90px;
   font-size: 14px;
 }
-.made{
+
+.made {
   font-weight: 400;
   line-height: 16.38px;
   text-align: justified;
