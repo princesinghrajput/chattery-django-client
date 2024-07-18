@@ -1,43 +1,32 @@
-import React, { useEffect, useState } from 'react';
+// src/App.js
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Login from "./pages/Login";
+import PageNotFound from "./pages/PageNotFound";
+import Blog from "./components/Blog";
+import BlogDetail from "./components/BlogDetail";
+
 import './App.css';
-import Header from './components/Header';
-import Main from './components/Main';
-import BlogPost from './components/BlogPost';
-import Footer from './components/Footer';
+import Signup from "./pages/Signup";
 
 function App() {
-    const [blog, setBlog] = useState([]);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            const response = await fetch('http://127.0.0.1:8000/api/blogs/');
-            const data = await response.json();
-            setBlog(data);
-        };
-
-        fetchData();
-    }, []);
-
-    return (
-        <div className="App">
-            <Header />
-            <Main />
-            <div className="posts"><b>Blog Posts</b></div>
-            <section className="cards">
-                {blog.map(post => (
-                    <BlogPost
-                        key={post.id}
-                        title={post.title}
-                        image={post.image_path}
-                        author={`User ${post.user}`} // Placeholder for user name
-                        date={new Date(post.created_at).toLocaleDateString()}
-                        comments={post.comments.length}
-                    />
-                ))}
-            </section>
-            <Footer />
-        </div>
-    );
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogDetail />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;

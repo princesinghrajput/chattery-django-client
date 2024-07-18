@@ -1,8 +1,10 @@
-import React from "react";
+// src/components/BlogPost.js
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const BlogPost = ({ title, image, author, date, comments }) => {
+const BlogPost = ({ title, image, author, date, comments, id }) => {
   return (
-    <div className="card max-w-xl bg-white rounded-lg shadow-md overflow-hidden mx-auto">
+    <Link to={`/blog/${id}`} className="card max-w-xl bg-white rounded-lg shadow-md overflow-hidden mx-auto">
       <img className="w-full h-60 object-cover" src={image} alt={title} />
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{title}</div>
@@ -23,7 +25,7 @@ const BlogPost = ({ title, image, author, date, comments }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
